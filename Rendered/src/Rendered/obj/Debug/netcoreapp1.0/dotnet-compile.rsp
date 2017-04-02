@@ -1,5 +1,5 @@
---temp-output:C:\Users\Home\Desktop\mojaapp\Rendered\src\Rendered\obj\Debug\netcoreapp1.0\
---out:C:\Users\Home\Desktop\mojaapp\Rendered\src\Rendered\bin\Debug\netcoreapp1.0\Rendered.dll
+--temp-output:C:\Users\Home\Desktop\PizzaChallanger\Rendered\src\Rendered\obj\Debug\netcoreapp1.0\
+--out:C:\Users\Home\Desktop\PizzaChallanger\Rendered\src\Rendered\bin\Debug\netcoreapp1.0\Rendered.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -198,9 +198,9 @@
 --reference:C:\Users\Home\.nuget\packages\System.Xml.ReaderWriter\4.3.0\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\Home\.nuget\packages\System.Xml.XDocument\4.3.0\ref\netstandard1.3\System.Xml.XDocument.dll
 --reference:C:\Users\Home\.nuget\packages\System.Xml.XmlDocument\4.3.0\ref\netstandard1.3\System.Xml.XmlDocument.dll
---resource:"C:\Users\Home\Desktop\mojaapp\Rendered\src\Rendered\obj\Debug\netcoreapp1.0\Rendereddotnet-compile.deps.json",Rendered.deps.json
-C:\Users\Home\Desktop\mojaapp\Rendered\src\Rendered\Program.cs
-C:\Users\Home\Desktop\mojaapp\Rendered\src\Rendered\Startup.cs
-C:\Users\Home\Desktop\mojaapp\Rendered\src\Rendered\Controllers\HomeController.cs
-C:\Users\Home\Desktop\mojaapp\Rendered\src\Rendered\Controllers\PizzaController.cs
-C:\Users\Home\Desktop\mojaapp\Rendered\src\Rendered\POCO\Pizza.cs
+--resource:"C:\Users\Home\Desktop\PizzaChallanger\Rendered\src\Rendered\obj\Debug\netcoreapp1.0\Rendereddotnet-compile.deps.json",Rendered.deps.json
+C:\Users\Home\Desktop\PizzaChallanger\Rendered\src\Rendered\Program.cs
+C:\Users\Home\Desktop\PizzaChallanger\Rendered\src\Rendered\Startup.cs
+C:\Users\Home\Desktop\PizzaChallanger\Rendered\src\Rendered\Controllers\HomeController.cs
+C:\Users\Home\Desktop\PizzaChallanger\Rendered\src\Rendered\Controllers\PizzaController.cs
+C:\Users\Home\Desktop\PizzaChallanger\Rendered\src\Rendered\POCO\Pizza.cs

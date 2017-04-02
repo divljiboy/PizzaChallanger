@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class Pizza
 {
     public string name { get; set; }
-    public int price { get; set; }
+    public double price { get; set; }
     public List<string> ingredients { get; set; }
 
 
