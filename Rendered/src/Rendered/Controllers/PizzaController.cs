@@ -11,7 +11,7 @@ namespace Rendered.Controllers
 {
     [Produces("application/json")]
     [Route("api/Pizza")]
-    public  class PizzaController : Controller
+    public class PizzaController : Controller
     {
         /**
         Link to git repository: https://github.com/divljiboy/PizzaChallanger.git
@@ -42,7 +42,8 @@ namespace Rendered.Controllers
         {
             size = 0;
             dict = stuff["pizzas"].ToObject<List<Dictionary<string, JToken>>>();
-            foreach (Dictionary<string, JToken> item in dict) {
+            foreach (Dictionary<string, JToken> item in dict)
+            {
                 if (item.Count == 2)
                 {
                     try
@@ -59,50 +60,40 @@ namespace Rendered.Controllers
                     {
                         return Json("Failed");
                     }
+                }
+
             }
-                
-            }
-
-            group_1= group_1.OrderBy(o => o.price).ToList();
-            group_2=group_2.OrderBy(o => o.price).ToList();
-            group_3=group_3.OrderBy(o => o.price).ToList();
-            group_4=group_4.OrderBy(o => o.price).ToList();
-            
-
-            return Json("Success");
-
-            /*dynamic d = new JObject();
+            dynamic d = new JObject();
             d.personal_info = new JObject(new JProperty("full_name", "Ivan Divljak"),new JProperty("email","ivan93.ns@hotmail.com"),new JProperty("code_link","blabla"));
-             dynamic g1 = new JProperty("group_1",new JObject(new JProperty("percentage", (group_1.Count / size*100).ToString() + "%"), new JProperty("cheapest", JToken.FromObject(group_1[0]))));
-             dynamic g2 = new JProperty("group_2", new JObject(new JProperty("percentage", (group_2.Count / size*100).ToString() + "%"), new JProperty("cheapest", JToken.FromObject(group_2[0]))));
-             dynamic g3 = new JProperty("group_3", new JObject(new JProperty("percentage", (group_3.Count / size * 100).ToString() + "%"), new JProperty("cheapest", JToken.FromObject(group_3[0]))));
-             dynamic g4 = new JProperty("group_4", new JObject(new JProperty("percentage", (group_4.Count / size * 100).ToString() + "%"), new JProperty("cheapest", JToken.FromObject(group_4[0]))));
+             dynamic g1 = new JProperty("group_1",new JObject(new JProperty("percentage", (group_1.Count / size*100).ToString() + "%"), new JProperty("cheapest", JToken.FromObject(group_1.OrderBy(x=>x.price).FirstOrDefault()))));
+             dynamic g2 = new JProperty("group_2", new JObject(new JProperty("percentage", (group_2.Count / size*100).ToString() + "%"), new JProperty("cheapest", JToken.FromObject(group_2.OrderBy(x => x.price).FirstOrDefault()))));
+             dynamic g3 = new JProperty("group_3", new JObject(new JProperty("percentage", (group_3.Count / size * 100).ToString() + "%"), new JProperty("cheapest", JToken.FromObject(group_3.OrderBy(x => x.price).FirstOrDefault()))));
+             dynamic g4 = new JProperty("group_4", new JObject(new JProperty("percentage", (group_4.Count / size * 100).ToString() + "%"), new JProperty("cheapest", JToken.FromObject(group_4.OrderBy(x => x.price).FirstOrDefault()))));
             d.answers = new JArray(new JObject(g1, g2, g3, g4));
            return Json(d);
-           
-    */
-
-
         }
 
         private void GroupPizza(Pizza p)
         {
 
-            if (meat.Any(m=>p.ingredients.Contains(m))) {
+            if (meat.Any(m => p.ingredients.Contains(m)))
+            {
                 group_1.Add(p);
             }
-            if (cheese.Intersect(p.ingredients).Count() >=2) {
+            if (cheese.Intersect(p.ingredients).Count() >= 2)
+            {
                 group_2.Add(p);
             }
-            if (meat.Any(m=>p.ingredients.Contains(m)) && olives.Any(x=>p.ingredients.Contains(x)))
+            if (meat.Any(m => p.ingredients.Contains(m)) && olives.Any(x => p.ingredients.Contains(x)))
             {
                 group_3.Add(p);
             }
-            if (p.ingredients.Contains("mushrooms")&& p.ingredients.Contains("mozzarella_cheese")) {
+            if (p.ingredients.Contains("mushrooms") && p.ingredients.Contains("mozzarella_cheese"))
+            {
                 group_4.Add(p);
             }
         }
 
-       
+
     }
 }
