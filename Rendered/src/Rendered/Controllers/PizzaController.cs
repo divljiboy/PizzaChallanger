@@ -32,7 +32,7 @@ namespace Rendered.Controllers
             price : double
 
          */
-        Pizza p = new Pizza();
+        Pizza p;
         List<Dictionary<string, JToken>> dict = new List<Dictionary<string, JToken>>();
 
         double size;
@@ -48,13 +48,13 @@ namespace Rendered.Controllers
                 {
                     try
                     {
+                        //p = new Pizza(item.Keys.First(), (double)item.Values.Last(),item.Values.First()["ingredients"].ToObject<List<string>>());
                         p = new Pizza();
                         p.ingredients = item.Values.First()["ingredients"].ToObject<List<string>>();
                         p.name = item.Keys.First();
                         p.price = (double)item.Values.Last();
                         GroupPizza(p);
-                        size++;
-
+                   
                     }
                     catch
                     {
@@ -92,6 +92,8 @@ namespace Rendered.Controllers
             {
                 group_4.Add(p);
             }
+            size++;
+
         }
 
 

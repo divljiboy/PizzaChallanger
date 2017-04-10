@@ -9,7 +9,7 @@ public class Pizza
     public List<string> ingredients { get; set; }
 
 
-    public Pizza(string _name,int _price,List<string> _ingredients) {
+    public Pizza(string _name,double _price,List<string> _ingredients) {
 
         name = _name;
         price = _price;
